@@ -1,0 +1,60 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "React Admin Dashboard",
+      "imgUrl": "/images/projects/dashboard.png",
+      "tags": ["MUI Material", "Formik", "Yup", "Storybook", "Nivo-charts"],
+      "gitUrl": "https://github.com/merveyyildiz/react-admin-dasthboard",
+      "previewUrl": "https://admin-dashboard-react-jss.netlify.app/"
+    },
+    {
+      "id": 2,
+      "title": "Hurriyet Election",
+      "imgUrl": "/images/projects/election.png",
+      "tags": ["HandleBars.js", "Scss", "HTML5"],
+      "gitUrl": null,
+      "previewUrl": "https://secim.hurriyet.com.tr/31-mart-2024-yerel-secimleri/tum-belediye-baskani-adaylari/"
+    },
+    {
+      "id": 3,
+      "title": "Hurriyet Recent Earthquake",
+      "imgUrl": "/images/projects/earthquake.png",
+      "tags": ["React", "Typescript", "Scss", "Swiper.js", "Axios"],
+      "gitUrl": null,
+      "previewUrl": "https://www.hurriyet.com.tr/son-dakika-depremler/"
+    },
+    {
+      "id": 4,
+      "title": "Demirorenmedya Haberlesme",
+      "imgUrl": "/images/projects/haberlesme.png",
+      "tags": ["React", "React Bootstrap", "i18next", "Scss"],
+      "gitUrl": null,
+      "previewUrl": "https://www.demirorenhaberlesme.com.tr/"
+    },
+    {
+      "id": 5,
+      "title": "React Watch List",
+      "imgUrl": "/images/projects/film.png",
+      "tags": ["Scss", "React Router Dom", "Context Api"],
+      "gitUrl": "https://github.com/merveyyildiz/movieWatchList",
+      "previewUrl": "https://watch-list-reactapp.netlify.app/"
+    },
+    {
+      "id": 6,
+      "title": "React Food Delivery App",
+      "imgUrl": "/images/projects/food.png",
+      "tags": ["Redux", "Reactstrap", "Scss", "React Router Dom"],
+      "gitUrl": "https://github.com/merveyyildiz/food-delivery-react",
+      "previewUrl": "https://food-delivery-reactapp.netlify.app/home/"
+    },
+    {
+      "id": 7,
+      "title": "React Twitter Clone",
+      "imgUrl": "/images/projects/twitter.png",
+      "tags": ["Tailwindcss", "React Twitter Widgets", "Firebase"],
+      "gitUrl": "https://github.com/merveyyildiz/twitter-clone",
+      "previewUrl": "https://twitter-clone-with-reactjs.netlify.app/"
+    }
+  ]
+}
