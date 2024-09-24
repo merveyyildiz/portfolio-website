@@ -2,43 +2,7 @@
 import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
-
-const TAB_DATA = [
-  {
-    title: "Education",
-    id: "education",
-    content: (
-      <ul>
-        <li>Computer Engineer / Karabuk University</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Skills",
-    id: "skills",
-    content: (
-      <ul className="list-disc">
-        <li>Javascript</li>
-        <li>Typescript</li>
-        <li>React</li>
-        <li>Angular</li>
-        <li>HTML5</li>
-        <li>SCSS</li>
-        <li>Handlebars.js</li>
-        <li>Redux</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Certifications",
-    id: "certifications",
-    content: (
-      <ul>
-        <li>Database Design and Programming with SQL / Oracle</li>
-      </ul>
-    ),
-  },
-];
+import tabData from "../data/tabData.json";
 
 const AboutSection = () => {
   const [tab, setTab] = useState("education");
@@ -71,18 +35,26 @@ const AboutSection = () => {
           </p>
 
           <div className="flex flex-row justify-start mt-8">
-            {TAB_DATA.map((data, index) => (
+            {tabData.data.map((data, index) => (
               <TabButton
                 selecTab={() => handleTabChange(data.id)}
                 active={tab === data.id}
                 key={index}
               >
-               {data.title}
+                {data.title}
               </TabButton>
             ))}
           </div>
           <div className="mt-8">
-            {TAB_DATA.find((data) => data.id === tab).content}
+            <ul
+              className={tab === "skills" ? "grid grid-cols-2 list-disc" : ""}
+            >
+              {tabData.data
+                .find((data) => data.id === tab)
+                .content.map((cntnt, index) => (
+                  <li key={index}>{cntnt}</li>
+                ))}
+            </ul>
           </div>
         </div>
       </div>

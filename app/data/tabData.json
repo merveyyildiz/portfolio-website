@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "title": "Education",
+      "id": "education",
+      "content": ["Computer Engineer / Karabuk University"]
+    },
+    {
+      "title": "Skills",
+      "id": "skills",
+      "content": [
+        "Javascript",
+        "Typescript",
+        "React",
+        "Angular",
+        "HTML5",
+        "SCSS",
+        "Handlebars.js",
+        "Redux",
+        "Storybook"
+      ]
+    },
+    {
+      "title": "Certifications",
+      "id": "certifications",
+      "content": ["Database Design and Programming with SQL / Oracle"]
+    }
+  ]
+}
