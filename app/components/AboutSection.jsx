@@ -15,7 +15,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white">
+    <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 py-8 px-4 sm:py-16 xl:px-16">
         <Image
           src="/images/about-image.png"
@@ -31,7 +31,7 @@ const AboutSection = () => {
             responsive web applications. I have experience working with
             Javascript, Typescript, React, Angular, Redux, HTML, SCSS,
             Handlebars.js, and Git. I am a quick learner an I am always looking
-            to expand my knowledge and skill set. I am a team player.
+            to expand my knowledge and skill set. I am a good team player.
           </p>
 
           <div className="flex flex-row justify-start mt-8">
