@@ -4,7 +4,8 @@ import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 
-const HeroSection = () => {
+const HeroSection = ({heroData}) => {
+  console.log(heroData)
   return (
     <section>
       <div className="flex justify-center flex-col text-center h-dvh">
@@ -18,22 +19,15 @@ const HeroSection = () => {
             Hello, I'm
           </span>
           <TypeAnimation
-            sequence={[
-              "Merve Sert",
-              1000,
-              "Computer Engineer",
-              1000,
-              "Frontend Developer",
-              1000,
-            ]}
+            sequence={heroData.data.title}
             wrapper="span"
             speed={50}
             repeat={Infinity}
-            className="block"
+            className="block title"
           />
         </motion.h1>
         <p className="text-[#ADB7BE] text-lg lg:text-xl mb-6">
-          A software developer who develops modern and user-friendly websites.
+          {heroData.data.desc}
         </p>
       </div>
     </section>

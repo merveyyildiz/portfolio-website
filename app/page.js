@@ -5,15 +5,17 @@ import AboutSection from "./components/AboutSection";
 import ProjectSection from "./components/ProjectsSection";
 import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
+import projectsData from "./data/projectsData.json";
+import heroData from "./data/heroData";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar />
       <div className="container px-12 py-4 mx-auto">
-        <HeroSection />
+        <HeroSection heroData={heroData} />
         <AboutSection />
-        <ProjectSection />
+        <ProjectSection projectsData={projectsData}/>
         <EmailSection />
       </div>
       <Footer />

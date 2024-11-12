@@ -1,10 +1,9 @@
 "use client"
 import React, { useRef } from "react";
 import ProjectCard from "./ProjectCard";
-import projectsData from "../data/projectsData.json";
 import { motion, useInView } from "framer-motion";
 
-const ProjectSection = () => {
+const ProjectSection = ({projectsData}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const cardVariants = {
