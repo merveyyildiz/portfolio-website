@@ -5,7 +5,6 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 
 const HeroSection = ({heroData}) => {
-  console.log(heroData)
   return (
     <section>
       <div className="flex justify-center flex-col text-center h-dvh">
