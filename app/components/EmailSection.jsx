@@ -15,16 +15,16 @@ const initialValue = {
 };
 
 const EmailSection = () => {
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (values) => {
     emailjs
       .send(
         "XXX", // email.js server id
         "XXX", // email.js template id
         {
           to_name: "Merve",
-          from_name: e.name,
-          from_email: e.email,
-          message: e.message,
+          from_name: values.name,
+          from_email: values.email,
+          message: values.message,
         },
         "XXX" // email.js public key
       )
@@ -59,7 +59,10 @@ const EmailSection = () => {
       </div>
       <div>
         <Formik
-          onSubmit={handleSubmit}
+          onSubmit={async (values, { resetForm }) => {
+            await handleSubmit(values);
+            resetForm();
+          }}
           initialValues={initialValue}
           validationSchema={contactFormSchema}
         >
