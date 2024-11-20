@@ -18,10 +18,22 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+html {
+  scroll-behavior: smooth !important;
+}
+#about::before,
+#projects::before,
+#concat::before {
+  content: "";
+  display: block;
+  height: 150px;
+  margin: -30px 0 0;
 }
