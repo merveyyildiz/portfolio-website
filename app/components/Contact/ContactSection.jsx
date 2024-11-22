@@ -1,12 +1,13 @@
 "use client";
 import React from "react";
-import GithubIcon from "../../public/images/github-icon.svg";
-import LinkedinIcon from "../../public/images/linkedin-icon.svg";
+import GithubIcon from "/public/images/github-icon.svg";
+import LinkedinIcon from "/public/images/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 import emailjs from "emailjs-com";
-import { Formik, Field, Form, ErrorMessage } from "formik";
-import contactFormSchema from "../schemas/contactFormSchema";
+import { Formik, Field, Form } from "formik";
+import contactFormSchema from "../../schemas/contactFormSchema";
+import css from "./Contact.module.scss";
 
 const initialValue = {
   name: "",
@@ -14,7 +15,7 @@ const initialValue = {
   message: "",
 };
 
-const EmailSection = () => {
+const ContactSection = () => {
   const handleSubmit = async (values) => {
     emailjs
       .send(
@@ -37,18 +38,15 @@ const EmailSection = () => {
   };
 
   return (
-    <section
-      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4"
-      id="contact"
-    >
+    <section className={css.contact} id="contact">
       <div>
-        <h5 className="text-xl font-bold text-white my-2">Let`s Connect</h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md">
+        <h5 className={css.title}>Let`s Connect</h5>
+        <p className={css.description}>
           I`m currently looking for new opportunites, my inbox is always open.
           Whether you have a question or just want to say hi, I`ll try my best
           to get back to you!
         </p>
-        <div className="socials flex flex-row gap-2">
+        <div className={css.socialIcons}>
           <Link href="https://github.com/merveyyildiz">
             <Image src={LinkedinIcon} alt="linkedin-icon" />
           </Link>
@@ -67,12 +65,9 @@ const EmailSection = () => {
           validationSchema={contactFormSchema}
         >
           {({ errors, touched, handleSubmit }) => (
-            <Form className="flex flex-col" onSubmit={handleSubmit}>
+            <Form className={css.form} onSubmit={handleSubmit}>
               <div className="mb-6">
-                <label
-                  className="text-white block text-sm font-medium"
-                  htmlFor="name"
-                >
+                <label className={css.label} htmlFor="name">
                   Your Name
                 </label>
                 <Field
@@ -81,17 +76,14 @@ const EmailSection = () => {
                   name="name"
                   required
                   placeholder="Joe Doe"
-                  className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                  className={css.field}
                 />
                 {errors.name && touched.name ? (
-                  <div className="text-red-500 mt-1">{errors.name}</div>
+                  <div className={css.error}>{errors.name}</div>
                 ) : null}
               </div>
               <div className="mb-6">
-                <label
-                  className="text-white block text-sm font-medium"
-                  htmlFor="email"
-                >
+                <label className={css.label} htmlFor="email">
                   Your Email
                 </label>
                 <Field
@@ -100,33 +92,27 @@ const EmailSection = () => {
                   name="email"
                   required
                   placeholder="doe@gmail.com"
-                  className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                  className={css.field}
                 />
                 {errors.email && touched.email ? (
-                  <div className="text-red-500 mt-1">{errors.email}</div>
+                  <div className={css.error}>{errors.email}</div>
                 ) : null}
               </div>
               <div className="mb-6">
-                <label
-                  htmlFor="message"
-                  className="text-white block text-sm mb-2 font-medium"
-                >
+                <label htmlFor="message" className={css.label}>
                   Message
                 </label>
                 <Field
                   name="message"
                   id="message"
-                  className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                  className={css.field}
                   placeholder="Let's talk about..."
                 />
                 {errors.message && touched.message ? (
-                  <div className="text-red-500 mt-1">{errors.message}</div>
+                  <div className={css.error}>{errors.message}</div>
                 ) : null}
               </div>
-              <button
-                type="submit"
-                className="bg-purple-500 hover:bg-purple-600 text-white font-medium py-2.5 rounded-lg"
-              >
+              <button type="submit" className={css.button}>
                 Send Message
               </button>
             </Form>
@@ -137,4 +123,4 @@ const EmailSection = () => {
   );
 };
 
-export default EmailSection;
+export default ContactSection;

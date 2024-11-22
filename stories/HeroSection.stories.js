@@ -1,4 +1,4 @@
-import HeroSection from "../app/components/HeroSection";
+import HeroSection from "../app/components/HeroSection/HeroSection";
 import "./HeroSection.css";
 
 export default {

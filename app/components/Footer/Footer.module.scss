@@ -1,0 +1,9 @@
+.footer {
+    @apply border border-t-[#33353F] border-l-transparent border-r-transparent text-white;
+}
+.container {
+    @apply p-12 flex justify-between;
+}
+.text {
+    @apply text-[#ADB7BE];
+}

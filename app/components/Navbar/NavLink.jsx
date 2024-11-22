@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react'
+import css from "./Navbar.module.scss";
 
 const NavLink = ({href, title,}) => {
   return (
@@ -7,7 +8,7 @@ const NavLink = ({href, title,}) => {
       href={href}
       smooth="true"
       duration={500}
-      className="block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded hover:text-white"
+      className={css.navLink}
     >
       {title}
     </Link>

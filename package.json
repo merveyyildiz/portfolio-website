@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
+    "classnames": "^2.5.1",
     "emailjs-com": "^3.2.0",
     "formik": "^2.4.6",
     "framer-motion": "^11.11.11",
@@ -20,6 +21,7 @@
     "react-animated-numbers": "^0.18.0",
     "react-dom": "^18",
     "react-type-animation": "^3.2.0",
+    "sass": "^1.81.0",
     "yup": "^1.4.0"
   },
   "devDependencies": {

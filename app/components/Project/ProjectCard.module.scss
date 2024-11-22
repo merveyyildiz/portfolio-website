@@ -1,0 +1,29 @@
+@tailwind components;
+
+.imageContainer {
+    @apply h-52 md:h-80 rounded-t-lg relative;
+}
+
+.imageCard {
+    @apply items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] hidden bg-opacity-0 flex hover:bg-opacity-80 transition-all duration-500;
+}
+
+.link {
+    @apply h-52 md:h-80 rounded-t-lg relative;
+}
+
+.icon {
+    @apply h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer ;
+}
+
+.previewUrlLink {
+    @apply h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white;
+}
+
+.textCard {
+    @apply text-white rounded-b-xl pt-3 bg-[#181818] py-6 px-4 h-32 md:h-60 lg:h-32;
+}
+
+.title {
+    @apply font-semibold mb-4;
+}

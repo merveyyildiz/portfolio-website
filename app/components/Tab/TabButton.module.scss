@@ -1,0 +1,11 @@
+.text {
+    @apply mr-3 font-semibold hover:text-white;
+}
+
+.active {
+    @apply text-white border-b border-purple-500;
+}
+
+.passive {
+    @apply text-[#ADB7BE];
+}

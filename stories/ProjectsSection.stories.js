@@ -1,4 +1,4 @@
-import ProjectsSection from "../app/components/ProjectsSection";
+import ProjectsSection from "../app/components/Project/ProjectsSection";
 import * as ProjectCard from './ProjectCard.stories';
 
 export default {

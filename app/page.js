@@ -1,9 +1,9 @@
-import HeroSection from "./components/HeroSection";
-import Navbar from "./components/Navbar";
-import AboutSection from "./components/AboutSection";
-import ProjectSection from "./components/ProjectsSection";
-import EmailSection from "./components/EmailSection";
-import Footer from "./components/Footer";
+import HeroSection from "./components/HeroSection/HeroSection";
+import Navbar from "./components/Navbar/Navbar";
+import AboutSection from "./components/About/AboutSection";
+import ProjectSection from "./components/Project/ProjectsSection";
+import ContactSection from "./components/Contact/ContactSection";
+import Footer from "./components/Footer/Footer";
 import projectsData from "./data/projectsData.json";
 import heroData from "./data/heroData";
 
@@ -22,7 +22,7 @@ export default function Home() {
         <HeroSection heroData={heroData} />
         <AboutSection />
         <ProjectSection projectsData={projectsData} />
-        <EmailSection />
+        <ContactSection />
       </div>
       <Footer />
     </main>

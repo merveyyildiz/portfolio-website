@@ -1,4 +1,4 @@
-import ProjectCard from '@/app/components/ProjectCard';
+import ProjectCard from '@/app/components/Project/ProjectCard';
 
 export default {
     title: 'ProjectCard',

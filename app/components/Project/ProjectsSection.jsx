@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import { motion, useInView } from "framer-motion";
+import css from "./ProjectSection.module.scss";
 
 const ProjectSection = ({projectsData}) => {
   const ref = useRef(null);
@@ -13,10 +14,10 @@ const ProjectSection = ({projectsData}) => {
 
   return (
     <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+      <h2 className={css.title}>
         My Projects
       </h2>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className={css.list}>
         {projectsData.projects.map((project, index) => (
           <motion.li
             variants={cardVariants}
