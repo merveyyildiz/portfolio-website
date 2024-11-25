@@ -3,6 +3,7 @@ import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import Tag from "../Tag/Tag";
 import css from "./ProjectCard.module.scss";
+import cx from "classnames";
 
 const ProjectCard = ({ imgUrl, title, tags, gitUrl, previewUrl }) => {
   return (
@@ -13,12 +14,12 @@ const ProjectCard = ({ imgUrl, title, tags, gitUrl, previewUrl }) => {
       >
         <div className={css.imageCard}>
           {gitUrl ? (
-            <Link href={gitUrl} className={css.link}>
+            <Link href={gitUrl} className={cx(css.gitLink, css.link)}>
               <CodeBracketIcon className={css.icon} />
             </Link>
           ) : null}
           {previewUrl ? (
-            <Link href={previewUrl} className={css.previewUrlLink}>
+            <Link href={previewUrl} className={css.link}>
               <EyeIcon className={css.icon} />
             </Link>
           ) : null}

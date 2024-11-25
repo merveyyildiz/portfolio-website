@@ -1,29 +1,41 @@
 @tailwind components;
 
 .imageContainer {
-    @apply h-52 md:h-80 rounded-t-lg relative;
+  @apply h-52 md:h-80 rounded-t-lg relative;
+
+  &:hover {
+    .imageCard {
+      @apply flex bg-opacity-80;
+    }
+  }
 }
 
 .imageCard {
-    @apply items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] hidden bg-opacity-0 flex hover:bg-opacity-80 transition-all duration-500;
+  @apply items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] hidden bg-opacity-0 transition-all duration-500;
 }
 
 .link {
-    @apply h-52 md:h-80 rounded-t-lg relative;
+  @apply h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white transition-all;
+
+  &:hover {
+    .icon {
+      @apply text-white;
+    }
+  }
+}
+
+.gitLink {
+  @apply mr-3;
 }
 
 .icon {
-    @apply h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer ;
-}
-
-.previewUrlLink {
-    @apply h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white;
+  @apply h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer;
 }
 
 .textCard {
-    @apply text-white rounded-b-xl pt-3 bg-[#181818] py-6 px-4 h-32 md:h-60 lg:h-32;
+  @apply text-white rounded-b-xl pt-3 bg-[#181818] py-6 px-4 h-32 md:h-60 lg:h-32;
 }
 
 .title {
-    @apply font-semibold mb-4;
+  @apply font-semibold mb-4;
 }
