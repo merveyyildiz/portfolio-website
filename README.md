@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 📖 Hakkında
 
-## Getting Started
+Proje Next.js 14 sürümünü kullanıyor.
 
-First, run the development server:
+### 📚Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<table>
+<tr>
+  <td> <a href="https://nextjs.org/">Next.js 14</a></td>
+  <td>React.js&#x27;in Server Side Rendering özelliği olan frameworklerinden birisi</td>
+</tr>
+<tr>
+  <td> <a href="https://formik.org/docs/overview">Formik</a></td>
+  <td>React.js de From oluşturmayı sağlayan kütüphanelerden birisi</td>
+</tr>
+<tr>
+  <td> <a href="https://github.com/jquense/yup">Yup</a></td>
+  <td>Form validasyon yapmamızı sağlayan kütüphanelerden birisi</td>
+</tr>
+<tr>
+  <td> <a href="https://www.emailjs.com/">Email JS</a></td>
+  <td>Email'leri doğrudan göndermeyi sağlayan kütüphane</td>
+</tr>
+<tr>
+  <td> <a href="https://react-type-animation.netlify.app/examples">React Type Animation</a></td>
+  <td>React'ta string animasyon yapmamızı sağlayan kütüphane</td>
+</tr>
+<tr>
+  <td> <a href="https://github.com/motiondivision/motion">Framer Motion</a></td>
+  <td>Framer'lara animasyon yapmayı sağlan kütüphane</td>
+</tr>
+<tr>
+  <td> <a href="https://tailwindcss.com/">Tailwind CSS</a></td>
+  <td>CSS'leri config üzerinden tönetmeyi sağlayan, utility based CSS kütüphanesi</td>
+</tr>
+<tr>
+  <td> <a href="https://www.npmjs.com/package/classnames">Classnames</a></td>
+  <td>Class isimlerini şart ve koşullara göre birleştirmeyi sağlayan kütüphane</td>
+</tr>
+</table>
+
+## Başlarken
+
+### 📦 Gerekinimler
+
+Node (v20.14.0+)
+
+### ⚙️ Nasıl Kullanılır
+
+1. Projeyi clone'la
+
+```
+git clone https://github.com/merveyyildiz/portfolio-website.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Proje dizinine terminal ile ilerle
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+cd portfolio-website
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. Bağımlılıkları yükle
 
-## Learn More
+```
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Development server&#x27;ı ayağa kaldır
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Bu adımlardn sonra proje [localhost:3000](localhost:3000) adresinde ayağa kalkacaktır
